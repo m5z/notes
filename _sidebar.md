@@ -1,2 +1,2 @@
-* [Home](/)
-* [Machine Learning](/machine-learning)
+* [Notes](/)
+* [Machine Learning](machine-learning.md)
