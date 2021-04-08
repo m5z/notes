@@ -43,4 +43,33 @@
 ## Comprehensions and Generators
 * Use comprehensions (list, dict, set) over `map` and `filter`
 * Avoid using more than two control subexpressions in a comprehension
-* 
+* Assignment operator used in value part of comprehension leaks the variable (?)
+* Implement iterator protocol by implementing `__iter__` as a generator
+  * `iter()` on an iterator returns itself
+  * `iter()` on a container returns a new iterator each time
+* Generators can be cascaded
+  * But be careful to use each generator only once, as they are stateful
+* Use `yield from` to yield all values from generator before returning control
+* Use `timeit` for quick benchmarks
+* You can send values into an iterator using `it.send()`, but don't use it
+  * Better use iterator as an input
+* You can re-raise exceptions in an iterator using `it.throw()` - don't use it
+  * Better implement iterator protocol
+* Use `itertools` to work with iterators (`help(itertools)`)
+  * linking together
+    * `chain` - combine iterators
+    * `repeat` - repeat single value endlessly or `n` amount times
+    * `cycle` - cycle an iterator
+    * `tee` - split an iterator into `n` parallel iterators
+    * `zip_longest` - zip iterators with placeholder values if one finishes
+  * filtering
+    * `islice` - slicing and striding on iterators
+    * `takewhile` - returns items until a predicate returns `False`
+    * `dropwhile` - drops items until a predicate returns `True`
+    * `filterfalse` - opposite of `filter`
+  * combining
+    * `accumulate` - similar to `reduce`, but returns items one at a time
+    * `product` - Cartesian product iterator
+    * `permutations` - `n` length permutations iterator
+    * `combinations` - `n` length unrepeated combinations iterator
+    * `combinations_with_replacement` - same as above, but repeated
