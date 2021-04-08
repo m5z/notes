@@ -39,3 +39,8 @@
 * Use keword-only arguments (`*` in arguments)
 * Use positional-only arguments (`/` in arguments) - since Python 3.8
 * Use `functools.wraps` for defining decorators
+
+## Comprehensions and Generators
+* Use comprehensions (list, dict, set) over `map` and `filter`
+* Avoid using more than two control subexpressions in a comprehension
+* 
