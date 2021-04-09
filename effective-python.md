@@ -30,12 +30,13 @@
 ## Functions
 * Don't unpack more than 3 multiple-return values from a function
   * If it's still needed, use a lightweight class or namedtuple
-* Don't assign any special meaning to None returned by functions
+* Don't assign any special meaning to `None` returned by functions
   * Raise exceptions to indicate special situations instead
 * Know how closures interact with variable scope
   * If the use of `nonlocal` gets complicated, write a class instead
   * Class with a `__call__(self, ...)` method can act as a function
 * Always specify optional arguments using keyword names, instead positions
+* Use docstrings to document default arguments (where they equal `None`)
 * Use keword-only arguments (`*` in arguments)
 * Use positional-only arguments (`/` in arguments) - since Python 3.8
 * Use `functools.wraps` for defining decorators
