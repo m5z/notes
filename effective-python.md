@@ -74,3 +74,14 @@
     * `permutations` - `n` length permutations iterator
     * `combinations` - `n` length unrepeated combinations iterator
     * `combinations_with_replacement` - same as above, but repeated
+
+## Classes and Interfaces
+* Write classes instead of multiply-nested data structures
+* Use `namedtuple`, but be careful if it's external API
+* Use `@classmethod` and `cls` to define alternative constructors
+* Use `super().__init__()` to run constructors in method resolution order
+  * solves diamond inheritance
+  * `Class.mro()` returns the MRO
+* Consider using mix-ins over multiple inheritance with instance attributes
+* Use private atrributes only to avoid naming conflicts with subclasses
+* Use `collections.abc` classes to construct custom container types
