@@ -85,3 +85,26 @@
 * Consider using mix-ins over multiple inheritance with instance attributes
 * Use private atrributes only to avoid naming conflicts with subclasses
 * Use `collections.abc` classes to construct custom container types
+
+## Metaclasses and Atributes
+* Avoid getter and setter methods
+  * in simple cases, use regular fields
+  * in complex cases, change fields to `@property`/`@property.setter`
+* Reuse behavior of `@property` methods with descriptor classes
+  * define a class implementing `__get__` and `__set__`
+  * remember descriptor instances are shared, use `WeakKeyDictionary`
+* Use `__getattr__` and `__getattribute__` for lazy loading
+  * Can be used in schemaless classes
+  * `__getattr__` is called only if attribute doesn't exist
+  * `__getattribute__` is always called when accessing an attribute
+  * Use `setattr` and `hasattr` built-in functions
+* Use `__setattr__` to do actions when setting values
+* Metaclasses can be used for subclass validation
+  * Inherit from `type`
+  * Define `def __new__(meta, name, bases, class_dict)`
+  * Use `metaclass=` in subclass definition
+  * Can use `__init_subclass__(cls)` for simplification
+  * `__init_subclass__` supports multiple inheritance
+* Use `__init_subclass__` or metaclasses for class registration
+* Use `__set_name__` for name of field corresponding to descriptor
+* Use class decorators to modify class methods and attributes
