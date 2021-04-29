@@ -108,3 +108,13 @@
 * Use `__init_subclass__` or metaclasses for class registration
 * Use `__set_name__` for name of field corresponding to descriptor
 * Use class decorators to modify class methods and attributes
+
+## Concurrency and parallelism
+* Concurrency - running seemingly in parallel
+* Use `subprocess` module to run child processes from command line
+  * `run` for simple usage, `Popen` for advanced
+* Use Python threads with blocking I/O
+* Use `threading.Lock` for mutex
+* Use `Queue` class for building processing pipelines
+  * Handles non-busy waiting, stopping workers, buffers, joining
+* 56
