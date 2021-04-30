@@ -117,4 +117,13 @@
 * Use `threading.Lock` for mutex
 * Use `Queue` class for building processing pipelines
   * Handles non-busy waiting, stopping workers, buffers, joining
-* 56
+* `fan-out` - spawning concurrent execution for each unit of work
+  * `fan-in` - waiting concurrent lines of execution to finish
+* Threads:
+  * require locking for coordination
+  * require around 8MB per executing thread
+  * take long time to start and to context-switch
+  * don't re-raise exceptions to starter
+* One does not simply use `Thread`s for fan-in and fan-out
+  * `Queue` can be used (improves scalability), but it's complicated
+  * 59
