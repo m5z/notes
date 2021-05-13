@@ -126,4 +126,10 @@
   * don't re-raise exceptions to starter
 * One does not simply use `Thread`s for fan-in and fan-out
   * `Queue` can be used (improves scalability), but it's complicated
-  * 59
+  * Consider `ThreadPoolExecutor` for concurrency/parallelism
+* Use coroutines for concurrent I/O
+  * `async`
+  * `await`
+  * `asyncio.run`
+  * `asyncio.gather`
+* 61
