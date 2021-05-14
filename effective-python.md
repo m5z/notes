@@ -128,8 +128,11 @@
   * `Queue` can be used (improves scalability), but it's complicated
   * Consider `ThreadPoolExecutor` for concurrency/parallelism
 * Use coroutines for concurrent I/O
-  * `async`
-  * `await`
-  * `asyncio.run`
-  * `asyncio.gather`
-* 61
+  * `async`, `await`, `asyncio.run`, `asyncio.gather`
+  * Python provides asynchronous versions of many language elements
+  * Use `run_in_executor` to run synchronous functions from coroutines
+  * Use `run_until_complete` to run coroutine in synchronous code
+  * System calls can slow down main event loop
+  * Use `debug=True` in `asyncio.run` to debug the event loop
+* Consider `concurrent.futures.ProcessPoolExecutor` for true parallelism
+  * Try it before resorting to `multiprocessing`
