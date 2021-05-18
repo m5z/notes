@@ -136,3 +136,10 @@
   * Use `debug=True` in `asyncio.run` to debug the event loop
 * Consider `concurrent.futures.ProcessPoolExecutor` for true parallelism
   * Try it before resorting to `multiprocessing`
+
+## Robustness and Performance
+* Take advantage of `try/except/else/finally`
+* Use `@contextlib.contextmanager` to define context managers from functions
+* Prefer `datetime` (+ `pytz`) over `time` module
+  * If must, use `time` only to convert between UTC and host's local time
+* 
