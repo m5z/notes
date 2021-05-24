@@ -142,4 +142,19 @@
 * Use `@contextlib.contextmanager` to define context managers from functions
 * Prefer `datetime` (+ `pytz`) over `time` module
   * If must, use `time` only to convert between UTC and host's local time
+* Use `copyreg` for custom pickling functions
+  * Can be used for versioning and backwards compatibility
+* Renaming a class makes unpickling impossible
+* Use `decimal` for finite precision and controlling rounding behavior
+* Use `fractions` for fractions
+* Use `cProfile` for profiling
+  * Use `pstats` to extract the output (`sort_stats`, `print_stats`, `print_callers`)
+* Use `deque` for FIFO queues
+* Use `bisect` to search through sorted lists
+* Use `functools.total_ordering` decorator to help implementing comarison operators
+* `heapq` implements a priority queue
+  * `queue.PriorityQueue` is a thread-safe option
+* Use `memoryview` and `bytearray` for fast non-copy operations on bytes
+
+## Testing and Debugging
 * 
