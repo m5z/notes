@@ -157,4 +157,22 @@
 * Use `memoryview` and `bytearray` for fast non-copy operations on bytes
 
 ## Testing and Debugging
+* Use `repr` instead of `print` for debugging
+  * In f-strings, use `!r` suffix
+  * Define `__repr__` to customize `repr` output
+  * Define it so that the output can be passed to `eval`
+* Use `patch.multiple` for creating many mocks
+  * Use `autospec=True`
+* `any_order` parameter of `assert_has_calls` allows to ignore order
+* Use debugger by modifying your code (since 3.7)
+  * Call the `breakpoint` built-in function, the terminall will turn into `pdb`
+  * Some commands: `p <name>`, `locals`, `help`, 
+  * `where`, `up`, `down`
+  * `step`, `next`, `return`, `continue`, `quit`
+* Run debugger through command: `python3 -m pdb <program>`
+* `gc.get_objects` returns currenly allocated objects
+* `tracemalloc.take_snapshot` and `compare_to` shows where objects were allocated
+  * Use `traceback` to print stack trace
+
+## Collaboration
 * 
