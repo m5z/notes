@@ -175,4 +175,13 @@
   * Use `traceback` to print stack trace
 
 ## Collaboration
-* 
+* You can run `python -m pip` to be sure where packages are installed
+* Use `python -m venv` for built-in `virtualenv`
+* Use `python -m pydoc` to run a server with current documentation
+* Use `Sphinx` for generating documentation
+* Write documentation for every module, class, method, and function using docstrings
+* Provide an explicit API for a module using the `__all__` special attribute
+  * You can also use leading underscores
+* You can use `configparser` to maintain environments configuration
+* Define root exceptions for modules to allow insulating API consumers from an API
+* Use `from __future__ import annotations` to help with forward references
