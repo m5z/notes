@@ -20,3 +20,11 @@
   * D: Dependency inversion principle
     * Define abstractions and parametrize constructors
     * You can use `pinject` for dependency injection
+
+## Unit Testing and Refactoring
+* Unit tests traits:
+  * isolation
+  * performance
+  * repeatability
+  * self-validating
+* 
