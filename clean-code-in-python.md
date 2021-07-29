@@ -27,4 +27,15 @@
   * performance
   * repeatability
   * self-validating
-* 
+* `pytest`
+  * `pytest.raises` allows `match` parameter to check for exception message
+  * You can stack parametrizations in pytest to produce a cartesian product
+* Property-based testing
+  * Helps to find scenarios that will make code fail
+  * `hypothesis` library
+* Mutation testing
+  * Production code is modified
+  * Tests are checked if they fail
+  * `mutpy` library
+* Common themes in testing
+  * 
