@@ -5,6 +5,10 @@
   * Preconditions, postconditions, invariants, side effects
   * If error occurs, it has to be easy to spot
 * Defensive programming
+  * Use `raise <e> from <original_exception>` to wrap exceptions
+  * Use assertions for seemingly impossible conditions 
+* Separation of concerns
+  * Well-defined software will achieve high cohesion and low coupling.
 * 
 
 ## SOLID Principles
@@ -37,5 +41,3 @@
   * Production code is modified
   * Tests are checked if they fail
   * `mutpy` library
-* Common themes in testing
-  * 
