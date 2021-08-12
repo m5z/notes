@@ -54,4 +54,14 @@
     * Shared state - several instances that synchronize state
       * Can be done with class attributes
       * Or descriptors
-      * Borg pattern ...
+      * Borg pattern: store a class-level dictionary with all attributes
+  * Builder
+* Structural patterns
+  * Adapter
+  * Composite
+  * Decorator
+    * A set of objects with the same method
+  * Facade
+    * We can put them in `__init__.py` to act as an interface
+* Behavioral patterns
+  * ...
