@@ -41,3 +41,17 @@
   * Production code is modified
   * Tests are checked if they fail
   * `mutpy` library
+
+## Common Design Patterns
+* Some of the patterns are embedded in Python
+* Creational patterns
+  * Factories
+    * Not really needed in Python
+    * We can use libraries like `pyinject`
+  * Singleton and shared state (monostate)
+    * Usually a bad practice, avoid as much as possible
+    * The easiest way is by using a module
+    * Shared state - several instances that synchronize state
+      * Can be done with class attributes
+      * Or descriptors
+      * Borg pattern ...
