@@ -64,4 +64,8 @@
   * Facade
     * We can put them in `__init__.py` to act as an interface
 * Behavioral patterns
-  * ...
+  * Chain of responsibility: process in turns, return first positive result
+  * The template method: parent class has some method with calls methods implemented by children
+  * Command: specify commands, execute them in another method
+  * State: use objects as states which know how to perform cetrain operations
+* The null object pattern
